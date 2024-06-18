@@ -1,5 +1,5 @@
 
-"""this program is an attempt to make a very basic version of the project."""
+"""this program is my project for codeinplace 2024 (stanford university)"""
 global_user_budget = 0.0
 global_chosen_processor = ""
 global_chosen_motherboard = ""
@@ -10,18 +10,18 @@ global_total_wattage = 0.0
 glboal_chosen_psu = ""
 
 processor_dict = {
-    "Intel Core i9 14900K"       : {"socket" : "LGA1700", "price" : 548.99, "wattage" : 253}, #253w
-    "AMD Ryzen 7 7800X3D"        : {"socket" : "AM5", "price" : 339.99, "wattage" : 60},     #60w
-    "Intel Core i7 14700K"       : {"socket" : "LGA1700", "price" : 381.99, "wattage" : 180}, #180w
-    "AMD Ryzen 7 7700X"          : {"socket" : "AM5", "price" : 276.99, "wattage" : 105},     #105w
-    "Intel Core i5 14600K"       : {"socket" : "LGA1700", "price" : 299.99, "wattage" : 180}, #180w
-    "AMD Ryzen 5 7600"           : {"socket" : "AM5", "price" : 188.99, "wattage" : 65},     #65w
-    "Intel Core i5 12600K"       : {"socket" : "LGA1700", "price" : 175.99, "wattage" : 150}, #150w
-    "AMD Ryzen 5 5600X"          : {"socket" : "AM5", "price" : 138.22, "wattage" : 65},     #65w
-    "Intel Core i5 11400F"       : {"socket" : "LGA1200", "price" : 115.59, "wattage" : 65}, #65w
-    "AMD Ryzen 5 3600X"          : {"socket" : "AM4", "price" : 119.99, "wattage" : 95},     #95w
-    "AMD Ryzen 7 2700X"          : { "socket" : "AM4", "price" : 154.99, "wattage" : 105},    #105w
-    "AMD Ryzen 5 2600X"          : {"socket" : "AM4", "price" : 60.00, "wattage" : 95}       #95w
+    "Intel Core i9 14900K"       : {"socket" : "LGA1700", "price" : 548.99, "wattage" : 253},
+    "AMD Ryzen 7 7800X3D"        : {"socket" : "AM5", "price" : 339.99, "wattage" : 60},
+    "Intel Core i7 14700K"       : {"socket" : "LGA1700", "price" : 381.99, "wattage" : 180},
+    "AMD Ryzen 7 7700X"          : {"socket" : "AM5", "price" : 276.99, "wattage" : 105},
+    "Intel Core i5 14600K"       : {"socket" : "LGA1700", "price" : 299.99, "wattage" : 180},
+    "AMD Ryzen 5 7600"           : {"socket" : "AM5", "price" : 188.99, "wattage" : 65},
+    "Intel Core i5 12600K"       : {"socket" : "LGA1700", "price" : 175.99, "wattage" : 150},
+    "AMD Ryzen 5 5600X"          : {"socket" : "AM5", "price" : 138.22, "wattage" : 65},
+    "Intel Core i5 11400F"       : {"socket" : "LGA1200", "price" : 115.59, "wattage" : 65},
+    "AMD Ryzen 5 3600X"          : {"socket" : "AM4", "price" : 119.99, "wattage" : 95},
+    "AMD Ryzen 7 2700X"          : { "socket" : "AM4", "price" : 154.99, "wattage" : 105},
+    "AMD Ryzen 5 2600X"          : {"socket" : "AM4", "price" : 60.00, "wattage" : 95}
 }
 
 motherboard_dict = {
@@ -52,15 +52,15 @@ ram_rules = {
 }
 
 gpu_dict = {
-    "GeForce RTX 4090"   : {"vram" : "24GB", "price" : 1499.99, "wattage" : 450}, #450w
-    "GeForce RTX 4080"   : {"vram" : "12GB", "price" : 1099.99, "wattage" : 350}, #350
-    "Radeon RX 7900 XTX" : {"vram" : "24GB", "price" : 911.99, "wattage" : 355}, #355w
-    "Radeon RX 7800XT"   : {"vram" : "16GB", "price" : 499.99, "wattage" : 263}, #263w
-    "GeForce RTX 4070"   : {"vram" : "12GB", "price" : 549.99, "wattage" : 200}, #200
-    "GeForce RTX 4060"   : {"vram" : "8GB", "price" : 369.99, "wattage" : 120}, #120w
-    "GeForce RTX 3090"   : {"vram" : "24GB", "price" : 959.95, "wattage" : 350}, #350w
-    "GeForce RTX 3080"   : {"vram" : "12GB", "price" : 600.00, "wattage" : 320}, #320w
-    "GeForce RTX 3060Ti" : {"vram" : "8GB", "price" : 450.00, "wattage" : 200}   #200w
+    "GeForce RTX 4090"   : {"vram" : "24GB", "price" : 1499.99, "wattage" : 450},
+    "GeForce RTX 4080"   : {"vram" : "12GB", "price" : 1099.99, "wattage" : 350},
+    "Radeon RX 7900 XTX" : {"vram" : "24GB", "price" : 911.99, "wattage" : 355},
+    "Radeon RX 7800XT"   : {"vram" : "16GB", "price" : 499.99, "wattage" : 263},
+    "GeForce RTX 4070"   : {"vram" : "12GB", "price" : 549.99, "wattage" : 200},
+    "GeForce RTX 4060"   : {"vram" : "8GB", "price" : 369.99, "wattage" : 120},
+    "GeForce RTX 3090"   : {"vram" : "24GB", "price" : 959.95, "wattage" : 350},
+    "GeForce RTX 3080"   : {"vram" : "12GB", "price" : 600.00, "wattage" : 320},
+    "GeForce RTX 3060Ti" : {"vram" : "8GB", "price" : 450.00, "wattage" : 200}
 }
 
 storage_dict = {
@@ -76,12 +76,12 @@ storage_dict = {
 }
 
 power_supply_dict = {
-    "AGV Series 500W Power Supply"   : {"type" : "non-modular", "price" : 39.99, "wattage" : 500}, #500w
-    "PS 650BSM"                      : {"type" : "semi-modular", "price" : 64.99, "wattage" : 650}, #650w
-    "Thermaltake GF1 (2024)"         : {"type" : "modular", "price" : 79.99, "wattage" : 750}, #750w
-    "Thermaltake GF1 (2024) (850)"   : {"type" : "modular", "price" : 94.99, "wattage" : 850}, #850w
-    "NZXT C1000 PSU"                 : {"type" : "modular", "price" : 139.99, "wattage" : 1000}, #1000w
-    "Corsair RM1200x Shift"          : {"type" : "modular", "price" : 204.99, "wattage" : 1200} #1200w
+    "AGV Series 500W Power Supply"   : {"type" : "non-modular", "price" : 39.99, "wattage" : 500},
+    "PS 650BSM"                      : {"type" : "semi-modular", "price" : 64.99, "wattage" : 650},
+    "Thermaltake GF1 (2024)"         : {"type" : "modular", "price" : 79.99, "wattage" : 750},
+    "Thermaltake GF1 (2024) (850)"   : {"type" : "modular", "price" : 94.99, "wattage" : 850},
+    "NZXT C1000 PSU"                 : {"type" : "modular", "price" : 139.99, "wattage" : 1000},
+    "Corsair RM1200x Shift"          : {"type" : "modular", "price" : 204.99, "wattage" : 1200}
 }
 
 allocations = {
